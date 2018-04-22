@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Список";
+}
+<div>
+    
+    <h3>Список компьютеров</h3>
+
+    @using (Html.BeginForm("GetComp", "Home", FormMethod.Post))
+    {
+        @Html.DropDownList("name", ViewBag.Slist as SelectList)
+        <input type="submit" value="Send" />
+    }
+
+    <a href="/Home/Create">Создать</a>
+</div>
+
